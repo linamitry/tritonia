@@ -1,0 +1,550 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+html
+    box-sizing: border-box
+
+*,*::before, *::after
+    box-sizing: border-box    
+
+* 
+  outline: 0 !important
+ul,
+li
+    list-style: none
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+    color: inherit
+h1,
+h2
+h3,
+h4,
+h5,
+h6
+    margin: 0
+    font-size: inherit
+
+h1
+    margin: 0
+
+body
+    background: url('/src/images/image-bg.png') center no-repeat fixed 
+    background-size: cover
+    background-color: rgba(0, 0, 0, .9)
+    z-index: -2
+    overflow-x: hidden
+
+.container
+    max-width: 1280px
+    margin: 0 auto
+    padding: 0 15px
+    position: relative
+    z-index: 3
+.header
+    background: url('/src/images/header-bg.png')
+    height: 100vh
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    color: #fff
+    position: relative
+    &::before
+        content: ('')
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(0, 0, 0, 0.45)
+        z-index: 2
+    &__top
+        display: flex
+        justify-content: space-between
+        font-family: 'Montserrat', sans-serif
+    &__logo
+        width: 65px
+        height: 61px
+        margin-right: 56px
+        margin-top: 30px
+    &__menu
+        display: flex
+    &__menu-item
+        display: inline-block
+        padding: 49px 11px 11px
+        margin-top: 0
+    &__menu-item:hover
+        background: #D58C51
+    &__menu-link
+        text-transform: uppercase
+        font-weight: 300
+        font-size: 16px
+        line-height: 20px
+    &__top-shop
+        display: flex
+        align-items: center
+        margin-top: 30px
+    &__shop-text
+        text-align: right
+        font-weight: 500
+        font-size: 17px
+        line-height: 21px
+    &__phone
+        margin-right: 64px
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+    &__shop-text
+        margin-right: 20px
+    &__content
+        display: flex
+        flex-direction: column
+        text-align: center
+        width-max: 896px
+        height-max: 212px
+        // justify-content: center
+        margin: 20% auto
+    &__content-title
+        margin-bottom: 42px
+    &__scroll-text
+        font-family: 'Open Sans', sans-serif
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+
+.slick-list
+    overflow: hidden
+.slick-track
+    display: flex
+    
+.slider
+    &__item
+        max-width: 402px
+        max-height: 1000px
+        position: relative
+        filter: none
+    &__item::before
+        content: ('')
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(19, 19, 19, 0.4)
+        z-index: 2
+    &-text
+        display: block
+        position: absolute
+        top: 50%
+        left: 0
+        right: 0
+        color: #fff
+        z-index: 5
+        text-align: center
+        transform: translateY(-50%)
+        font-family: 'Montserrat', sans-serif
+        font-weight: 700
+        font-size: 31px
+        line-height: 38px
+        text-transform: uppercase
+        padding: 0 10%
+        overflow: hidden
+    &-text.visible
+        display: none
+    &__item.visible
+        backdrop-filter: blur(10px)
+    &-btn
+        display: none
+        position: absolute
+        top: 53%
+        left: 0
+        right: 0
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        padding: 12px 58px
+        background: #D58C51
+        color: #fff
+        z-index: 5
+        text-align: center
+        transform: translateY(-50%)
+        margin: 0 auto
+        color: #000
+        cursor: pointer
+        border: 1px solid #D58C51
+    &-btn:active
+        background: #fff
+        color: #D58C51
+    &-btn.visible
+        display: block
+
+
+
+.info
+    &-page
+        display: flex
+        justify-content: space-between
+    &-picture
+        width: 30%
+        margin-top: -120px
+    &-body
+        display: flex
+        width: 65%
+        padding-right: 10%
+        padding-top: 5%
+        padding-bottom: 15px
+        color: #fff
+        border-bottom: 1px solid #D58C51
+    &-text
+        margin-top: 139px
+    &-img
+        margin-top: 130px
+        margin-left: 80px
+    &-text-span
+        border: 4.5px #fff solid
+        background: #fff
+        max-width: 273px
+        border-radius: 50px
+        margin-bottom: 17px
+    &-text-title
+        text-transform: uppercase
+        font-family: 'Montserrat', sans-serif
+        font-weight: 700
+        font-size: 31px
+        line-height: 38px
+        margin-bottom: 60px
+        margin-right: 200px
+    &-text-content
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        margin-right: 80px
+    &-btn
+        background: transparent
+        margin-top: 116px
+        cursor: pointer
+        border: none
+        color: #fff
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        position: relative
+    &-btn::after
+        content: url('/src/images/arrow-info-btn.svg')
+        position: absolute
+        right: -10px
+    
+
+    &-kitchen-list
+        width: 88%
+        text-align: right
+        color: #D58C51
+        font-size: 17px
+        line-height: 35px
+        margin-top: 20px
+        cursor: pointer
+    &-item
+        position: relative
+    &-item-crab::after
+        content: url('/src/images/crab.svg')
+        position: absolute
+        top: 5px
+        right: -45px
+    &-item-autor::after
+        content: url('/src/images/kitchen.svg')
+        position: absolute
+        top: 5px
+        right: -45px
+    &-item-wine::after
+        content: url('/src/images/wine-glass.svg')
+        position: absolute
+        top: 5px
+        right: -45px
+    
+
+
+.slick-list
+    display: flex
+.kitchen-slider .slick-list 
+    padding: 1px
+    
+
+
+.kitchen
+    margin-top: 5%
+    &-all-menu 
+        margin-top: 120px
+        margin-right: 120px
+    &-all-menu p
+        color: #fff
+        text-transform: uppercase
+        font-family: 'Montserrat', sans-serif
+        font-weight: 700
+        font-size: 31px
+        line-height: 38px
+    &-btn-menu
+        white-space: nowrap
+        text-align: center
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        padding: 12px 25px
+        background: #D58C51
+        color: #000
+        cursor: pointer
+        border: 1px solid #D58C51
+    &-body
+        display: flex
+        justify-content: flex-end
+        width: 1230px
+        margin-left: auto
+        margin-right: 30px
+    &-slider
+        height: 100%
+        width: 100%
+        position: relative
+    &-slider-item
+        display: flex
+        flex-direction: column
+        padding: 40px 21px
+        height: 100%
+        width: 100%
+        border: 1px transparent solid
+        font-family: 'Montserrat', sans-serif
+        color: #fff
+    &-slider-item img
+        width: 95%
+        margin-bottom: 13px
+    &-slider-item h4
+        width: 100%
+        font-weight: 500
+        font-size: 17px
+        line-height: 17px
+        margin-bottom: 21px
+    &-slider-item p
+        width: 100%
+        padding-bottom: 10px
+        font-size: 14px
+        line-height: 17px
+        font-weight: 300
+    &-shop
+        margin-top: auto
+        width: 100%
+        display: flex
+        align-items: center
+    &-price
+        font-size: 17px
+        font-weight: 500
+        line-height: 21px
+    &-price span
+        font-weight: normal
+        font-size: .8em
+        line-height: 17px
+        font-weight: 300
+    &-add
+        background-image: url('/src/images/add.svg')
+        background-repeat: no-repeat
+        cursor: pointer
+        width: 30px
+        height: 30px
+        border: none
+        background-color: transparent
+        padding-left: 28px
+    &-slider-item:hover
+        border: 1px solid #D58C51
+        color: #D58C51
+        .kitchen-add
+            background-image: url('/src/images/add-hover.svg')
+
+
+
+
+    
+
+
+
+
+
+.slick-btn
+    position: absolute
+    width: 50px
+    height: 50px
+    border: transparent
+    background: transparent
+    cursor: pointer
+    background-size: contain
+    background-repeat: no-repeat
+    &__back
+        background-image: url('/src/images/arrow-back.svg')
+        left: -149px
+        top: 0
+    &__back:hover
+        background-image: url('/src/images/arrow-back-hover.svg')
+    &__next
+        // position: absolute
+        background: url('/src/images/arrow-next.svg') 
+        left: -68px
+        top: 0
+    &__next:hover
+        background: url('/src/images/arrow-next-hover.svg') 
+
+
+.instagram
+    margin-top: 41px
+    display: flex
+    width: 95%
+    justify-content: flex-end
+    margin-left: auto
+    margin-bottom: 76px
+    &-gallery
+        width: 60%
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+    &-item
+        margin-right: 20px
+        margin-bottom: 20px
+        position: relative
+    &-item:hover::before
+        content: ('')
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0
+        top: 0
+        background-color: rgba(19, 19, 19, 0.5)
+    &-item:hover::after
+        content: url('/src/images/instagram/insta.svg')
+        position: absolute
+        display: block
+        top: 50%
+        right: 0
+        left: 0
+        text-align: center
+        transform: translateY(-50%)
+    &-slider
+        position: relative
+    &-slider::before
+        content: ('')
+        position: absolute
+        right: 33%
+        left: 0
+        bottom: 0
+        top: 33%
+        background-color: rgba(19, 19, 19, 0.5)
+    &-events
+        width: 35%
+    &-events-slider .slick-dots
+        position: absolute
+        display: flex
+        margin-left: 40px
+        margin-top: -40px
+    &-events-slider .slick-dots li
+        list-style: none
+        margin: 0 10px
+    &-events-slider .slick-dots li.slick-active button
+        background-color: #D58C51
+        border: 1px solid #D58C51
+    &-events-slider .slick-dots li button
+        border: 1px solid #fff
+        font-size: 0
+        width: 14px
+        height: 14px
+        background-color: transparent
+        border-radius: 50%
+    &-slider h4
+        position: absolute
+        font-family: 'Montserrat', sans-serif
+        font-weight: 700
+        font-size: 23px
+        line-height: 28px
+        text-transform: uppercase
+        color: #fff
+        margin-top: -280px
+        margin-left: 36px
+        width: 45%
+    &-slider p
+        position: absolute
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #fff
+        margin-top: -200px
+        border-top: 1px solid #D58C51
+        padding: 16px 36px
+        width: 50%
+    
+.footer
+    display: flex
+    justify-content: space-between
+    width: 85%
+    padding-left: 15%
+    padding-top: 35px
+    padding-bottom: 35px
+    border-top: 1px solid #D58C51
+    color: #fff
+    font-family: 'Montserrat', sans-serif
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    &-left
+        max-width: 300px
+    &-center a
+        position: relative
+    &-center a::before
+        content: url('/src/images/footer/footer-lofo.svg')
+        cursor: pointer
+        left: -43px
+        top: -4px
+        position: absolute
+    &-right
+        display: flex
+        font-weight: 400
+    &-phone
+        display: flex
+        flex-direction: column
+        // align-items: right
+        padding-right: 60px
+        text-align: right
+    &-number
+        font-size: 19px
+        line-height: 23px
+    &-social
+        display: flex
+        flex-direction: column
+        position: relative
+    &-instagram::before
+        content: url('/src/images/footer/footer-insta.svg')
+        position: absolute
+        top: -15px
+        left: -27px
+        cursor: pointer
+    &-vkontakte::before
+        content: url('/src/images/footer/footer-vk.svg')
+        position: absolute
+        top: 15px
+        left: -27px
+        cursor: pointer
+
+
+
+
+        
+
+        
+
+
+        
+    
+
+    
+ 
+
+
+    
